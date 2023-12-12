@@ -1,23 +1,23 @@
 package exam.daniel.takehome.module.auth.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.ToString;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity(name = "user_db")
 @Getter
+@ToString
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
     private String username;
     private String password;
     private String lastName;
     private String firstName;
     private String middleName;
-    private Date birthDate;
+    private LocalDate birthDate;
 }
