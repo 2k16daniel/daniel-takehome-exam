@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public class InvalidCredentialException extends RuntimeException{
-    private final String message = "login failed!";
+    private final String message = "Login Failed!";
     public InvalidCredentialException() {
-        super("login Failed!");
+        super("Login Failed!");
     }
 }
